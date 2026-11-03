@@ -124,7 +124,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "bash -c 'f=$(ls \"$HOME\"/.claude/plugins/cache/caveman/caveman/*/src/hooks/caveman-statusline.sh 2>/dev/null | head -n1); [ -n \"$f\" ] && bash \"$f\"'"
+    "command": "bash -c 'f=$(ls \"$HOME\"/.claude/plugins/cache/caveman/caveman/*/src/hooks/caveman-statusline.sh 2>/dev/null | head -n1); [ -n \"$f\" ] && bash \"$f\"; true'"
   },
   "enabledPlugins": {
     "caveman@caveman": true,
