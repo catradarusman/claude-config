@@ -1,0 +1,162 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh pr merge *)"
+    ],
+    "defaultMode": "auto"
+  },
+  "skillOverrides": {
+    "adversarial-review": "off",
+    "analytics-tracking": "off",
+    "animejs": "off",
+    "app-store-screenshots": "off",
+    "beam-glow-states": "off",
+    "beautiful-shadows": "off",
+    "competitor-alternatives": "off",
+    "conductor-rewrite-performance": "off",
+    "container-lines": "off",
+    "contribute-catalog": "off",
+    "corner-diagonals": "off",
+    "css-animations": "off",
+    "css-border-gradient": "off",
+    "documentary-brutalist-agency": "off",
+    "editorial-portfolio-chapters": "off",
+    "framed-grid-layout": "off",
+    "frontend-design": "off",
+    "glass-dark-ui": "off",
+    "grill-me": "off",
+    "gsap": "off",
+    "hyperframes": "off",
+    "hyperframes-cli": "off",
+    "hyperframes-media": "off",
+    "hyperframes-registry": "off",
+    "impeccable": "off",
+    "landing-page": "off",
+    "linear-local-first-architecture": "off",
+    "liquid-metal-border": "off",
+    "lottie": "off",
+    "mesh-gradient-dark-blue-clean": "off",
+    "minimal-zine-poster": "off",
+    "ogilvy-copywriting": "off",
+    "operational-enterprise-ai": "off",
+    "page-cro": "off",
+    "pricing-page": "off",
+    "product-proof-saas": "off",
+    "programmatic-seo": "off",
+    "progressive-blur": "off",
+    "remotion-to-hyperframes": "off",
+    "reveal-hover-effect": "off",
+    "schema-markup": "off",
+    "seo-audit": "off",
+    "service-booking-flow": "off",
+    "shaders-cursor-ripples": "off",
+    "skeuomorphic-ui": "off",
+    "staggered-word-reveal": "off",
+    "tailwind": "off",
+    "tailwind-v4": "off",
+    "thinking-orbs": "off",
+    "three": "off",
+    "typegpu": "off",
+    "vercel-react-best-practices": "off",
+    "visual-style-presets": "off",
+    "waapi": "off",
+    "webgl-laser": "off",
+    "website-to-hyperframes": "off",
+    "ethskills:l2": "off",
+    "ethskills:layer2": "off",
+    "ethskills:contracts": "off",
+    "ethskills:defi": "off",
+    "remotion-best-practices": "off",
+    "remotion-captions": "off",
+    "remotion-create": "off",
+    "remotion-docs": "off",
+    "remotion-interactivity": "off",
+    "remotion-maps": "off",
+    "remotion-markup": "off",
+    "remotion-multimedia": "off",
+    "remotion-render": "off",
+    "remotion-saas": "off",
+    "remotion-studio": "off",
+    "remotion-upgrade": "off",
+    "animate-expo": "off",
+    "animation-vocabulary": "off",
+    "find-animation-opportunities": "off",
+    "improve-animations": "off",
+    "figma": "off",
+    "karpathy": "off",
+    "ask-sonner": "off",
+    "write-swift": "off",
+    "deslop-shared-libs": "off",
+    "pick-ui-library": "off",
+    "prototype": "off",
+    "review-animations": "off",
+    "eval-plan": "off",
+    "find-skills": "off",
+    "render-parity-audit": "off",
+    "test-audit": "off",
+    "web-design-engineer": "off"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -I \"$HOME/.claude/hooks/guard.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=\"$HOME/.claude/skills/gstack/hosts/claude/hooks/timeline-stop-hook\"; [ -x \"$f\" ] && \"$f\" || true",
+            "timeout": 5
+          }
+        ],
+        "_gstack_source": "gstack-timeline-stop"
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash -c 'f=$(ls \"$HOME\"/.claude/plugins/cache/caveman/caveman/*/src/hooks/caveman-statusline.sh 2>/dev/null | head -n1); [ -n \"$f\" ] && bash \"$f\"'"
+  },
+  "enabledPlugins": {
+    "caveman@caveman": true,
+    "ethskills@ethskills": true,
+    "interfaces@interfaces": false,
+    "figma@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    },
+    "ethskills": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/austintgriffith/ethskills.git"
+      }
+    },
+    "interfaces": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/jakubkrehel/skills.git"
+      }
+    }
+  },
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "medium"
+    }
+  },
+  "tui": "fullscreen",
+  "theme": "dark-daltonized"
+}
