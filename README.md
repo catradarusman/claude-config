@@ -10,7 +10,9 @@ cd claude-config
 ./install.sh
 ```
 
-The script copies files into `~/.claude`. It backs up your `CLAUDE.md` and `settings.json` first. It never touches `.credentials.json`.
+The script links `CLAUDE.md`, `settings.json`, and `hooks/` from `~/.claude` to this repo. Edit them here, then commit. If a real file is in the way, the script moves it to `~/.claude/backup-<date>/` first.
+
+It copies `skills/` into `~/.claude/skills`. It skips `gstack` and any skill that is a symlink or managed by gstack. It never touches `.credentials.json`. You can run it again safely.
 
 ## What is here
 
